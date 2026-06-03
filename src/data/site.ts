@@ -5,5 +5,5 @@ export const site = {
   url: "https://example.com",
   email: "svenaoki@gmail.com",
   location: "Zürich, Switzerland",
-  ogImage: "/social/og-default.svg",
+  ogImage: "green-galaxy/social/og-default.svg",
 };
