@@ -1,0 +1,43 @@
+---
+import { home } from "../../data/home";
+import Button from "../ui/Button.astro";
+---
+
+<section class="section">
+  <div class="container">
+    <div class="cta">
+      <h2 class="cta__heading">{home.cta.heading}</h2>
+      <p class="cta__description">{home.cta.description}</p>
+      <Button href={home.cta.href} variant="primary" label={home.cta.label} size="lg" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta {
+    text-align: center;
+    padding: var(--space-12) var(--space-5);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .cta__heading {
+    font-size: var(--text-2xl);
+    font-family: var(--font-serif);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+    letter-spacing: -0.04em;
+  }
+
+  .cta__description {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

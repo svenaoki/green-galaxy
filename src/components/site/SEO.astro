@@ -1,0 +1,45 @@
+---
+import { site } from "../../data/site";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+}
+
+const { title, description, canonical, ogImage, noIndex = false } = Astro.props;
+
+const pageTitle = title ? `${title} — ${site.name}` : site.name;
+const pageDescription = description || site.description;
+const canonicalUrl = new URL(canonical || Astro.url.pathname, site.url);
+const pageCanonical = canonicalUrl.toString();
+const pageImage = new URL(ogImage || site.ogImage, site.url).toString();
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  url: site.url,
+  email: site.email,
+};
+---
+
+<title>{pageTitle}</title>
+<meta name="description" content={pageDescription} />
+<link rel="canonical" href={pageCanonical} />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={pageDescription} />
+<meta property="og:url" content={pageCanonical} />
+<meta property="og:image" content={pageImage} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={pageDescription} />
+<meta name="twitter:image" content={pageImage} />
+
+<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
+{noIndex && <meta name="robots" content="noindex" />}

@@ -1,0 +1,98 @@
+---
+import Button from "../ui/Button.astro";
+
+export interface Props {
+  formAction: string;
+}
+---
+
+<form class="contact-form" action={Astro.props.formAction} method="POST" aria-label="Contact form">
+  <div class="contact-form__field">
+    <label for="name" class="contact-form__label">Name</label>
+    <input type="text" id="name" name="name" required autocomplete="name" class="contact-form__input" placeholder="Your name" />
+  </div>
+
+  <div class="contact-form__field">
+    <label for="email" class="contact-form__label">Email</label>
+    <input type="email" id="email" name="email" required autocomplete="email" inputmode="email" class="contact-form__input" placeholder="your@email.com" />
+  </div>
+
+  <div class="contact-form__field">
+    <label for="subject" class="contact-form__label">Subject</label>
+    <input type="text" id="subject" name="subject" class="contact-form__input" placeholder="What's this about?" />
+  </div>
+
+  <div class="contact-form__field">
+    <label for="message" class="contact-form__label">Message</label>
+    <textarea id="message" name="message" required class="contact-form__textarea" rows="6" placeholder="Your message..."></textarea>
+  </div>
+
+  <div class="contact-form__field" aria-hidden="true" style="position: absolute; left: -9999px;">
+    <label for="_gotcha">Honeypot</label>
+    <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div class="contact-form__actions">
+    <Button type="submit" variant="primary" size="lg" label="Send message" />
+  </div>
+</form>
+
+<style>
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    max-width: 480px;
+  }
+
+  .contact-form__label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+  }
+
+  .contact-form__input,
+  .contact-form__textarea {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background-color: var(--color-surface-strong);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition:
+      border-color var(--transition-fast),
+      box-shadow var(--transition-fast);
+    line-height: var(--leading-normal);
+  }
+
+  .contact-form__input::placeholder,
+  .contact-form__textarea::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .contact-form__input:focus,
+  .contact-form__textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 4px var(--color-ring);
+  }
+
+  .contact-form__textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .contact-form__actions {
+    display: flex;
+  }
+
+  @media (max-width: 520px) {
+    .contact-form__actions :global(.btn) {
+      width: 100%;
+    }
+  }
+</style>

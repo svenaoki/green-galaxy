@@ -1,0 +1,36 @@
+---
+import ContentLayout from "../layouts/ContentLayout.astro";
+import ContactForm from "../components/contact/ContactForm.astro";
+import ContactMethods from "../components/contact/ContactMethods.astro";
+import { getFormAction } from "../lib/form";
+
+const formAction = getFormAction();
+---
+
+<ContentLayout
+  pageTitle="Contact"
+  intro="Have a question, an idea, or just want to say hello? I'd love to hear from you."
+  title="Contact"
+  description="Get in touch with me."
+  canonical={Astro.url.pathname}
+>
+  <div class="contact-grid">
+    <ContactForm formAction={formAction} />
+    <ContactMethods />
+  </div>
+</ContentLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+      align-items: start;
+    }
+  }
+</style>

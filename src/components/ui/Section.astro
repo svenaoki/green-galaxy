@@ -1,0 +1,12 @@
+---
+export interface Props {
+  compact?: boolean;
+  background?: boolean;
+}
+
+const { compact = false, background = false } = Astro.props;
+---
+
+<section class:list={["section", compact && "section--compact", background && "section--background"]}>
+  <slot />
+</section>

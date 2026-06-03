@@ -1,0 +1,143 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Your Name" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Main" [ref=e5]:
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link "Home" [ref=e8] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e9]:
+            - link "About" [ref=e10] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e11]:
+            - link "Resume" [ref=e12] [cursor=pointer]:
+              - /url: /resume
+          - listitem [ref=e13]:
+            - link "Contact" [ref=e14] [cursor=pointer]:
+              - /url: /contact
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - heading "Your Name" [level=1] [ref=e19]
+        - paragraph [ref=e20]: Software Engineer
+        - generic [ref=e21]:
+          - generic [ref=e22]: City, Country
+          - generic [ref=e23]: hello@example.com
+      - generic [ref=e24]:
+        - heading "Summary" [level=2] [ref=e25]
+        - paragraph [ref=e26]: Software engineer with X years of experience building web applications. Passionate about clean architecture, developer tooling, and creating products that make a difference.
+      - generic [ref=e27]:
+        - heading "Experience" [level=2] [ref=e28]
+        - generic [ref=e29]:
+          - article [ref=e30]:
+            - generic [ref=e31]:
+              - generic [ref=e32]:
+                - heading "Lead Software Engineer" [level=3] [ref=e33]
+                - paragraph [ref=e34]: Company Name
+              - generic [ref=e35]:
+                - paragraph [ref=e36]: 2022-01 — Present
+                - paragraph [ref=e37]: City, Country
+            - list [ref=e38]:
+              - listitem [ref=e39]: Led a team of 5 engineers building a SaaS platform serving 10,000+ users.
+              - listitem [ref=e40]: Architected migration from monolithic architecture to modular service-oriented system, reducing deployment time by 60%.
+              - listitem [ref=e41]: Established code review and testing standards that increased test coverage from 30% to 85%.
+            - generic [ref=e42]:
+              - generic [ref=e43]: TypeScript
+              - generic [ref=e44]: React
+              - generic [ref=e45]: Node.js
+              - generic [ref=e46]: PostgreSQL
+          - article [ref=e47]:
+            - generic [ref=e48]:
+              - generic [ref=e49]:
+                - heading "Full-Stack Developer" [level=3] [ref=e50]
+                - paragraph [ref=e51]: Previous Company
+              - generic [ref=e52]:
+                - paragraph [ref=e53]: 2019-03 — 2021-12
+                - paragraph [ref=e54]: City, Country
+            - list [ref=e55]:
+              - listitem [ref=e56]: Built and maintained multiple customer-facing web applications.
+              - listitem [ref=e57]: Improved page load performance by 40% through code splitting and image optimization.
+              - listitem [ref=e58]: Implemented CI/CD pipeline reducing release cycle from weeks to daily deployments.
+            - generic [ref=e59]:
+              - generic [ref=e60]: JavaScript
+              - generic [ref=e61]: React
+              - generic [ref=e62]: Python
+              - generic [ref=e63]: Docker
+          - article [ref=e64]:
+            - generic [ref=e65]:
+              - generic [ref=e66]:
+                - heading "Junior Developer" [level=3] [ref=e67]
+                - paragraph [ref=e68]: Earlier Company
+              - generic [ref=e69]:
+                - paragraph [ref=e70]: 2017-06 — 2019-02
+                - paragraph [ref=e71]: City, Country
+            - list [ref=e72]:
+              - listitem [ref=e73]: Developed RESTful APIs and integrated third-party services.
+              - listitem [ref=e74]: Built internal tools that automated manual reporting, saving 10 hours per week.
+            - generic [ref=e75]:
+              - generic [ref=e76]: JavaScript
+              - generic [ref=e77]: Node.js
+              - generic [ref=e78]: MongoDB
+      - generic [ref=e79]:
+        - heading "Education" [level=2] [ref=e80]
+        - article [ref=e82]:
+          - generic [ref=e83]:
+            - heading "B.Sc. in Computer Science" [level=3] [ref=e84]
+            - paragraph [ref=e85]: 2013 — 2017
+          - paragraph [ref=e86]: University Name
+      - generic [ref=e87]:
+        - heading "Skills" [level=2] [ref=e88]
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - heading "Languages" [level=3] [ref=e91]
+            - generic [ref=e92]:
+              - generic [ref=e93]: TypeScript
+              - generic [ref=e94]: JavaScript
+              - generic [ref=e95]: Python
+              - generic [ref=e96]: SQL
+          - generic [ref=e97]:
+            - heading "Frameworks" [level=3] [ref=e98]
+            - generic [ref=e99]:
+              - generic [ref=e100]: React
+              - generic [ref=e101]: Node.js
+              - generic [ref=e102]: Astro
+              - generic [ref=e103]: Next.js
+          - generic [ref=e104]:
+            - heading "Tools" [level=3] [ref=e105]
+            - generic [ref=e106]:
+              - generic [ref=e107]: Git
+              - generic [ref=e108]: Docker
+              - generic [ref=e109]: CI/CD
+              - generic [ref=e110]: PostgreSQL
+              - generic [ref=e111]: AWS
+          - generic [ref=e112]:
+            - heading "Design" [level=3] [ref=e113]
+            - generic [ref=e114]:
+              - generic [ref=e115]: Figma
+              - generic [ref=e116]: Responsive Design
+              - generic [ref=e117]: Design Systems
+  - contentinfo [ref=e118]:
+    - generic [ref=e120]:
+      - paragraph [ref=e121]: © 2026 Your Name.
+      - list [ref=e122]:
+        - listitem [ref=e123]:
+          - link "GitHub" [ref=e124] [cursor=pointer]:
+            - /url: https://github.com/yourusername
+        - listitem [ref=e125]:
+          - link "LinkedIn" [ref=e126] [cursor=pointer]:
+            - /url: https://linkedin.com/in/yourusername
+  - generic [ref=e129]:
+    - button "Menu" [ref=e130]:
+      - img [ref=e132]
+      - generic: Menu
+    - button "Inspect" [ref=e136]:
+      - img [ref=e138]
+      - generic: Inspect
+    - button "Audit" [ref=e140]:
+      - img [ref=e142]
+      - generic: Audit
+    - button "Settings" [ref=e145]:
+      - img [ref=e147]
+      - generic: Settings

@@ -1,0 +1,68 @@
+---
+import { site } from "../../data/site";
+import { socialLinks } from "../../data/social-links";
+---
+
+<aside class="contact__methods" aria-labelledby="contact-details-heading">
+  <h2 id="contact-details-heading" class="contact__heading">Contact details</h2>
+  <ul class="contact__list">
+    <li>
+      <span class="contact__label">Email</span>
+      <a href={`mailto:${site.email}`} class="contact__value">{site.email}</a>
+    </li>
+    {socialLinks.map((link) => (
+      <li>
+        <span class="contact__label">{link.platform}</span>
+        <a href={link.url} target="_blank" rel="noopener noreferrer" class="contact__value">
+          {link.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>
+
+<style>
+  .contact__methods {
+    max-width: 480px;
+    padding: var(--space-6);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    align-self: start;
+  }
+
+  .contact__heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-6);
+  }
+
+  .contact__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .contact__label {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-1);
+  }
+
+  .contact__value {
+    font-size: var(--text-base);
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .contact__value:hover {
+    text-decoration: underline;
+  }
+</style>

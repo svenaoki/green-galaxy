@@ -1,0 +1,80 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Your Name" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Main" [ref=e5]:
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link "Home" [ref=e8] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e9]:
+            - link "About" [ref=e10] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e11]:
+            - link "Resume" [ref=e12] [cursor=pointer]:
+              - /url: /resume
+          - listitem [ref=e13]:
+            - link "Contact" [ref=e14] [cursor=pointer]:
+              - /url: /contact
+  - main [ref=e15]:
+    - generic [ref=e18]:
+      - paragraph [ref=e19]: Available for thoughtful web work
+      - heading "Building calm, useful digital products." [level=1] [ref=e20]
+      - paragraph [ref=e21]: I'm a software engineer focused on fast, accessible interfaces and maintainable systems that feel simple to use.
+      - generic [ref=e22]:
+        - link "View resume" [ref=e23] [cursor=pointer]:
+          - /url: /resume
+        - link "Get in touch" [ref=e24] [cursor=pointer]:
+          - /url: /contact
+    - generic [ref=e27]:
+      - heading "About me" [level=2] [ref=e29]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: I'm a software engineer with a passion for building clean, maintainable, and user-focused applications. I care deeply about code quality, design detail, and creating products that are a pleasure to use.
+          - paragraph [ref=e33]: Over the years, I've worked across the stack — from designing systems architecture to crafting pixel-perfect interfaces. I believe the best work comes from a balance of technical discipline and creative thinking.
+        - link "Read more about me" [ref=e35] [cursor=pointer]:
+          - /url: /about
+    - generic [ref=e37]:
+      - heading "Selected experience" [level=2] [ref=e39]
+      - generic [ref=e40]:
+        - article [ref=e41]:
+          - generic [ref=e42]:
+            - heading "Lead Engineer at Company" [level=3] [ref=e43]
+            - generic [ref=e44]: Led a team of five engineers building a SaaS platform serving 10k+ users. Architected the migration from a monolith to a modular service-oriented system.
+        - article [ref=e45]:
+          - generic [ref=e46]:
+            - heading "Full-Stack Developer at Previous Co" [level=3] [ref=e47]
+            - generic [ref=e48]: Built and maintained multiple customer-facing web applications using React, Node.js, and PostgreSQL. Improved page load performance by 40%.
+        - article [ref=e49]:
+          - generic [ref=e50]:
+            - heading "Open Source Contributor" [level=3] [ref=e51]
+            - generic [ref=e52]: Active contributor to several open source projects. Created and maintain a popular developer tool with 2k+ GitHub stars.
+    - generic [ref=e55]:
+      - heading "Let's work together" [level=2] [ref=e56]
+      - paragraph [ref=e57]: I'm always open to interesting projects and conversations.
+      - link "Get in touch" [ref=e58] [cursor=pointer]:
+        - /url: /contact
+  - contentinfo [ref=e59]:
+    - generic [ref=e61]:
+      - paragraph [ref=e62]: © 2026 Your Name.
+      - list [ref=e63]:
+        - listitem [ref=e64]:
+          - link "GitHub" [ref=e65] [cursor=pointer]:
+            - /url: https://github.com/yourusername
+        - listitem [ref=e66]:
+          - link "LinkedIn" [ref=e67] [cursor=pointer]:
+            - /url: https://linkedin.com/in/yourusername
+  - generic [ref=e70]:
+    - button "Menu" [ref=e71]:
+      - img [ref=e73]
+      - generic: Menu
+    - button "Inspect" [ref=e77]:
+      - img [ref=e79]
+      - generic: Inspect
+    - button "Audit" [ref=e81]:
+      - img [ref=e83]
+      - generic: Audit
+    - button "Settings" [ref=e86]:
+      - img [ref=e88]
+      - generic: Settings

@@ -1,0 +1,32 @@
+---
+import { home } from "../../data/home";
+import Card from "../ui/Card.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+---
+
+<section class="section section--background">
+  <div class="container container--wide">
+    <SectionTitle title="Selected experience" />
+    <div class="highlights__grid">
+      {home.highlights.map((item) => (
+        <Card title={item.title}>
+          {item.description}
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .highlights__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 768px) {
+    .highlights__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

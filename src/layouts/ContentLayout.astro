@@ -1,0 +1,67 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  pageTitle: string;
+  intro?: string;
+  canonical?: string;
+}
+
+const { title, description, pageTitle, intro, canonical } = Astro.props;
+---
+
+<BaseLayout title={title || pageTitle} description={description} canonical={canonical}>
+  <div class="content-page">
+    <div class="container">
+      <header class="content-header">
+        <h1 class="content-header__title">{pageTitle}</h1>
+        {intro && <p class="content-header__intro">{intro}</p>}
+      </header>
+      <div class="content-body">
+        <slot />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .content-page {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  @media (min-width: 768px) {
+    .content-page {
+      padding-top: var(--space-16);
+    }
+  }
+
+  .content-header {
+    margin-bottom: var(--space-12);
+  }
+
+  .content-header__title {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-4);
+    letter-spacing: -0.05em;
+  }
+
+  @media (min-width: 768px) {
+    .content-header__title {
+      font-size: var(--text-4xl);
+    }
+  }
+
+  .content-header__intro {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    line-height: var(--leading-relaxed);
+  }
+
+  .content-body {
+    max-width: var(--max-width-content);
+  }
+</style>

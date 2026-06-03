@@ -1,0 +1,134 @@
+---
+import type { ExperienceEntry } from "../../data/resume.data";
+
+export interface Props {
+  entries: ExperienceEntry[];
+}
+---
+
+<div class="experience">
+  {Astro.props.entries.map((entry) => (
+    <article class="experience__item">
+      <div class="experience__header">
+        <div class="experience__left">
+          <h3 class="experience__role">{entry.role}</h3>
+          <p class="experience__company">{entry.company}</p>
+        </div>
+        <div class="experience__right">
+          <p class="experience__dates">
+            {entry.startDate} — {entry.endDate}
+          </p>
+          {entry.location && <p class="experience__location">{entry.location}</p>}
+        </div>
+      </div>
+      <ul class="experience__achievements">
+        {entry.achievements.map((achievement) => (
+          <li class="experience__achievement">{achievement}</li>
+        ))}
+      </ul>
+      {entry.tools && entry.tools.length > 0 && (
+        <div class="experience__tools">
+          {entry.tools.map((tool) => (
+            <span class="experience__tool">{tool}</span>
+          ))}
+        </div>
+      )}
+    </article>
+  ))}
+</div>
+
+<style>
+  .experience {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+  }
+
+  .experience__item {
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: var(--space-8);
+  }
+
+  .experience__item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .experience__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+
+  @media (min-width: 768px) {
+    .experience__header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .experience__role {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-1);
+  }
+
+  .experience__company {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+  }
+
+  .experience__right {
+    text-align: left;
+  }
+
+  @media (min-width: 768px) {
+    .experience__right {
+      text-align: right;
+    }
+  }
+
+  .experience__dates {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-1);
+  }
+
+  .experience__location {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .experience__achievements {
+    list-style: disc;
+    padding-left: var(--space-5);
+    margin-bottom: var(--space-4);
+  }
+
+  .experience__achievement {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-2);
+  }
+
+  .experience__tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .experience__tool {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    background-color: var(--color-accent-soft);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-full);
+  }
+</style>

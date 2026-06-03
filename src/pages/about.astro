@@ -1,0 +1,16 @@
+---
+import ContentLayout from "../layouts/ContentLayout.astro";
+import AboutContent from "../content/pages/about.mdx";
+---
+
+<ContentLayout
+  pageTitle="About"
+  intro="A bit about me, what I do, and what I care about."
+  title="About"
+  description="Learn more about me, my background, and what drives my work."
+  canonical={Astro.url.pathname}
+>
+  <div class="prose">
+    <AboutContent />
+  </div>
+</ContentLayout>

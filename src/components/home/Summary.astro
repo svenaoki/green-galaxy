@@ -1,0 +1,55 @@
+---
+import { home } from "../../data/home";
+import Button from "../ui/Button.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+---
+
+<section class="section section--compact">
+  <div class="container container--wide">
+    <div class="summary">
+      <SectionTitle title={home.summary.heading} />
+      <div>
+        <div class="summary__text">
+          {home.summary.paragraphs.map((p) => <p>{p}</p>)}
+        </div>
+        <div class="summary__action">
+          <Button href={home.summary.cta.href} variant="ghost" label={home.summary.cta.label} />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .summary {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 768px) {
+    .summary {
+      grid-template-columns: minmax(12rem, 0.8fr) 1.6fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+  }
+
+  .summary__text {
+    max-width: var(--max-width-content);
+  }
+
+  .summary__text p {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-5);
+  }
+
+  .summary__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .summary__action {
+    margin-top: var(--space-8);
+  }
+</style>

@@ -1,0 +1,77 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Sven Schilke" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Main" [ref=e5]:
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link "Home" [ref=e8] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e9]:
+            - link "About" [ref=e10] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e11]:
+            - link "Resume" [ref=e12] [cursor=pointer]:
+              - /url: /resume
+          - listitem [ref=e13]:
+            - link "Contact" [ref=e14] [cursor=pointer]:
+              - /url: /contact
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - heading "Contact" [level=1] [ref=e19]
+        - paragraph [ref=e20]: Have a question, an idea, or just want to say hello? I'd love to hear from you.
+      - generic [ref=e22]:
+        - form "Contact form" [ref=e23]:
+          - generic [ref=e24]:
+            - generic [ref=e25]: Name
+            - textbox "Name" [ref=e26]:
+              - /placeholder: Your name
+          - generic [ref=e27]:
+            - generic [ref=e28]: Email
+            - textbox "Email" [ref=e29]:
+              - /placeholder: your@email.com
+          - generic [ref=e30]:
+            - generic [ref=e31]: Subject
+            - textbox "Subject" [ref=e32]:
+              - /placeholder: What's this about?
+          - generic [ref=e33]:
+            - generic [ref=e34]: Message
+            - textbox "Message" [ref=e35]:
+              - /placeholder: Your message...
+          - generic [ref=e36]:
+            - text: Honeypot
+            - textbox [ref=e37]
+          - button "Send message" [ref=e39] [cursor=pointer]
+        - complementary "Contact details" [ref=e40]:
+          - heading "Contact details" [level=2] [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - generic [ref=e44]: Email
+              - link "svenaoki@gmail.com" [ref=e45] [cursor=pointer]:
+                - /url: mailto:svenaoki@gmail.com
+            - listitem [ref=e46]:
+              - generic [ref=e47]: linkedin
+              - link "LinkedIn" [ref=e48] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/sven-schilke-phd/
+  - contentinfo [ref=e49]:
+    - generic [ref=e51]:
+      - paragraph [ref=e52]: © 2026 Sven Schilke.
+      - list [ref=e53]:
+        - listitem [ref=e54]:
+          - link "LinkedIn" [ref=e55] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/sven-schilke-phd/
+  - generic [ref=e58]:
+    - button "Menu" [ref=e59]:
+      - img [ref=e61]
+      - generic: Menu
+    - button "Inspect" [ref=e65]:
+      - img [ref=e67]
+      - generic: Inspect
+    - button "Audit" [ref=e69]:
+      - img [ref=e71]
+      - generic: Audit
+    - button "Settings" [ref=e74]:
+      - img [ref=e76]
+      - generic: Settings

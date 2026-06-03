@@ -1,0 +1,131 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ResumeHeader from "../components/resume/ResumeHeader.astro";
+import ExperienceList from "../components/resume/ExperienceList.astro";
+import EducationList from "../components/resume/EducationList.astro";
+import SkillsGrid from "../components/resume/SkillsGrid.astro";
+import { resume } from "../data/resume.data";
+
+const detailGroups = [
+  resume.languages && { title: "Languages", items: resume.languages },
+  resume.certifications && { title: "Certifications", items: resume.certifications },
+].filter(Boolean) as { title: string; items: string[] }[];
+---
+
+<BaseLayout title="Resume" description="Professional resume and work experience." canonical={Astro.url.pathname}>
+  <div class="resume-page">
+    <div class="container">
+      <ResumeHeader />
+
+      <section class="resume-section">
+        <h2 class="resume-section__title">Summary</h2>
+        <p class="resume-section__text">{resume.summary}</p>
+      </section>
+
+      <section class="resume-section">
+        <h2 class="resume-section__title">Experience</h2>
+        <ExperienceList entries={resume.experience} />
+      </section>
+
+      <section class="resume-section">
+        <h2 class="resume-section__title">Education</h2>
+        <EducationList entries={resume.education} />
+      </section>
+
+      <section class="resume-section">
+        <h2 class="resume-section__title">Skills</h2>
+        <SkillsGrid skills={resume.skills} />
+      </section>
+
+      {detailGroups.length > 0 && (
+        <section class="resume-section">
+          <h2 class="resume-section__title">Additional details</h2>
+          <div class="detail-grid">
+            {detailGroups.map((group) => (
+              <div class="detail-group">
+                <h3 class="detail-group__title">{group.title}</h3>
+                <div class="detail-group__items">
+                  {group.items.map((item) => <span class="detail-tag">{item}</span>)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .resume-page {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-16);
+  }
+
+  @media (min-width: 768px) {
+    .resume-page {
+      padding-top: var(--space-16);
+    }
+  }
+
+  .resume-section {
+    margin-bottom: var(--space-12);
+  }
+
+  .resume-section__title {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .resume-section__text {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-content);
+  }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  @media (min-width: 640px) {
+    .detail-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .detail-group__title {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-3);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .detail-group__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .detail-tag {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    background-color: var(--color-accent-soft);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-full);
+  }
+</style>

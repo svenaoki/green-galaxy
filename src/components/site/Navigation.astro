@@ -1,0 +1,87 @@
+---
+import { navigation } from "../../data/navigation";
+
+export interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<nav class="nav" aria-label="Main">
+  <ul class="nav__list">
+    {navigation.map((item) => (
+      <li>
+        <a
+          href={item.href}
+          class:list={["nav__link", currentPath === item.href && "nav__link--active"]}
+          aria-current={currentPath === item.href ? "page" : undefined}
+        >
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .nav {
+    max-width: 100%;
+  }
+
+  .nav__list {
+    display: flex;
+    gap: var(--space-1);
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav__link {
+    display: inline-block;
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition:
+      color var(--transition-fast),
+      background-color var(--transition-fast);
+  }
+
+  .nav__link:hover {
+    color: var(--color-text);
+    background-color: var(--color-accent-soft);
+  }
+
+  .nav__link--active {
+    color: var(--color-accent);
+    background-color: var(--color-accent-soft);
+  }
+
+  @media (max-width: 520px) {
+    .nav {
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: var(--space-1);
+      scrollbar-width: none;
+    }
+
+    .nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav__list {
+      justify-content: flex-start;
+      gap: var(--space-1);
+      flex-wrap: nowrap;
+      min-width: max-content;
+    }
+
+    .nav__link {
+      padding-inline: var(--space-2);
+      font-size: var(--text-xs);
+    }
+  }
+</style>

@@ -1,0 +1,209 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Sven Schilke" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Main" [ref=e5]:
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link "Home" [ref=e8] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e9]:
+            - link "About" [ref=e10] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e11]:
+            - link "Resume" [ref=e12] [cursor=pointer]:
+              - /url: /resume
+          - listitem [ref=e13]:
+            - link "Contact" [ref=e14] [cursor=pointer]:
+              - /url: /contact
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - heading "Sven Schilke" [level=1] [ref=e19]
+        - paragraph [ref=e20]: Data Science Architect, PhD
+        - generic [ref=e21]:
+          - generic [ref=e22]: Zürich, Switzerland
+          - generic [ref=e23]: svenaoki@gmail.com
+      - generic [ref=e24]:
+        - heading "Summary" [level=2] [ref=e25]
+        - paragraph [ref=e26]: Data Science Architect with 10+ years of experience across financial services, industrial analytics, market research, and scientific computing. Combines AI architecture, deep learning, signal processing, and full-lifecycle machine learning delivery from research and proposal through production deployment.
+      - generic [ref=e27]:
+        - heading "Experience" [level=2] [ref=e28]
+        - generic [ref=e29]:
+          - article [ref=e30]:
+            - generic [ref=e31]:
+              - generic [ref=e32]:
+                - heading "Data Science Architect" [level=3] [ref=e33]
+                - paragraph [ref=e34]: Viseca
+              - generic [ref=e35]:
+                - paragraph [ref=e36]: 2023-10 — Present
+                - paragraph [ref=e37]: Zürich, Switzerland
+            - list [ref=e38]:
+              - listitem [ref=e39]: Lead data science architecture initiatives in a regulated financial services environment.
+              - listitem [ref=e40]: Design AI and analytics solutions that align machine learning capabilities with enterprise architecture requirements.
+            - generic [ref=e41]:
+              - generic [ref=e42]: AI Architecture
+              - generic [ref=e43]: Machine Learning
+              - generic [ref=e44]: Enterprise Architecture
+              - generic [ref=e45]: Financial Services
+          - article [ref=e46]:
+            - generic [ref=e47]:
+              - generic [ref=e48]:
+                - heading "Data Science Consultant" [level=3] [ref=e49]
+                - paragraph [ref=e50]: ABB
+              - generic [ref=e51]:
+                - paragraph [ref=e52]: 2020-06 — 2023-08
+                - paragraph [ref=e53]: Zürich, Switzerland
+            - list [ref=e54]:
+              - listitem [ref=e55]: Led advanced analytics initiatives in ABB's turbocharging division from proposal through implementation.
+              - listitem [ref=e56]: Delivered manufacturing and finance use cases using methods ranging from linear regression to deep learning.
+              - listitem [ref=e57]: Built data pipelines, developed models, and deployed machine learning solutions into operational settings.
+            - generic [ref=e58]:
+              - generic [ref=e59]: Python
+              - generic [ref=e60]: Deep Learning
+              - generic [ref=e61]: Data Pipelines
+              - generic [ref=e62]: ML Deployment
+          - article [ref=e63]:
+            - generic [ref=e64]:
+              - generic [ref=e65]:
+                - heading "Lead Data Scientist" [level=3] [ref=e66]
+                - paragraph [ref=e67]: Kantar
+              - generic [ref=e68]:
+                - paragraph [ref=e69]: 2018-06 — 2020-04
+                - paragraph [ref=e70]: London, United Kingdom
+            - list [ref=e71]:
+              - listitem [ref=e72]: Led a data science team delivering insights for clients including Facebook, Google, Nestlé, and Coca-Cola.
+              - listitem [ref=e73]: Applied regression, classification, clustering, and forecasting to proprietary consumer data.
+              - listitem [ref=e74]: Translated statistical learning outputs into recommendations supporting client growth and decision-making.
+            - generic [ref=e75]:
+              - generic [ref=e76]: Statistical Learning
+              - generic [ref=e77]: Forecasting
+              - generic [ref=e78]: Consumer Analytics
+          - article [ref=e79]:
+            - generic [ref=e80]:
+              - generic [ref=e81]:
+                - heading "Research Scientist" [level=3] [ref=e82]
+                - paragraph [ref=e83]: Deltares
+              - generic [ref=e84]:
+                - paragraph [ref=e85]: 2017-06 — 2018-05
+                - paragraph [ref=e86]: Utrecht, Netherlands
+            - list [ref=e87]:
+              - listitem [ref=e88]: Led research on fiber-optic and seismic methods and contributed technical proposals for new project opportunities.
+              - listitem [ref=e89]: Developed signal processing algorithms to extend fiber-optic sensing applications beyond oil and gas.
+            - generic [ref=e90]:
+              - generic [ref=e91]: Signal Processing
+              - generic [ref=e92]: Fiber Optics
+              - generic [ref=e93]: Seismic Methods
+          - article [ref=e94]:
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - heading "PhD Research Associate" [level=3] [ref=e97]
+                - paragraph [ref=e98]: Schlumberger
+              - generic [ref=e99]:
+                - paragraph [ref=e100]: 2013-09 — 2017-06
+                - paragraph [ref=e101]: Cambridge, United Kingdom
+            - list [ref=e102]:
+              - listitem [ref=e103]: Performed numerical simulation of seismic data.
+              - listitem [ref=e104]: Developed signal processing algorithms for optical and seismic data workflows.
+              - listitem [ref=e105]: Automated DAS monitoring workflows to improve signal-to-noise acquisition quality.
+            - generic [ref=e106]:
+              - generic [ref=e107]: Scientific Computing
+              - generic [ref=e108]: Numerical Simulation
+              - generic [ref=e109]: Signal Processing
+          - article [ref=e110]:
+            - generic [ref=e111]:
+              - generic [ref=e112]:
+                - heading "Master Thesis Project" [level=3] [ref=e113]
+                - paragraph [ref=e114]: Schlumberger
+              - generic [ref=e115]:
+                - paragraph [ref=e116]: 2013-03 — 2013-08
+                - paragraph [ref=e117]: Cambridge, United Kingdom
+            - list [ref=e118]:
+              - listitem [ref=e119]: Developed signal processing algorithms to improve signal-to-noise ratios.
+              - listitem [ref=e120]: Built inversion algorithms to localize hypocentres of induced seismic earthquakes.
+              - listitem [ref=e121]: Published related research through EarthDoc.
+            - generic [ref=e122]:
+              - generic [ref=e123]: Inversion Algorithms
+              - generic [ref=e124]: Seismic Analysis
+              - generic [ref=e125]: Research
+      - generic [ref=e126]:
+        - heading "Education" [level=2] [ref=e127]
+        - generic [ref=e128]:
+          - article [ref=e129]:
+            - generic [ref=e130]:
+              - heading "Doctor of Philosophy (PhD), Scientific Computing" [level=3] [ref=e131]
+              - paragraph [ref=e132]: 2013 — 2017
+            - paragraph [ref=e133]: MINES ParisTech
+          - article [ref=e134]:
+            - generic [ref=e135]:
+              - heading "Master of Science (MS), Applied Geophysics" [level=3] [ref=e136]
+              - paragraph [ref=e137]: 2011 — 2013
+            - paragraph [ref=e138]: ETH Zürich
+          - article [ref=e139]:
+            - generic [ref=e140]:
+              - heading "Master of Science (MS), Applied Geophysics" [level=3] [ref=e141]
+              - paragraph [ref=e142]: 2011 — 2013
+            - paragraph [ref=e143]: Technische Universiteit Delft
+          - article [ref=e144]:
+            - generic [ref=e145]:
+              - heading "Bachelor of Science (BS), Geosciences" [level=3] [ref=e146]
+              - paragraph [ref=e147]: 2008 — 2011
+            - paragraph [ref=e148]: RWTH Aachen University
+      - generic [ref=e149]:
+        - heading "Skills" [level=2] [ref=e150]
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - heading "Architecture & ML" [level=3] [ref=e153]
+            - generic [ref=e154]:
+              - generic [ref=e155]: AI Architecture
+              - generic [ref=e156]: Deep Learning
+              - generic [ref=e157]: Enterprise Architecture
+              - generic [ref=e158]: ML Deployment
+          - generic [ref=e159]:
+            - heading "Data Science Methods" [level=3] [ref=e160]
+            - generic [ref=e161]:
+              - generic [ref=e162]: Advanced Analytics
+              - generic [ref=e163]: Forecasting
+              - generic [ref=e164]: Statistical Learning
+              - generic [ref=e165]: Signal Processing
+          - generic [ref=e166]:
+            - heading "Engineering" [level=3] [ref=e167]
+            - generic [ref=e168]:
+              - generic [ref=e169]: Data Pipelines
+              - generic [ref=e170]: Model Development
+              - generic [ref=e171]: Kubernetes
+              - generic [ref=e172]: Scientific Computing
+      - generic [ref=e173]:
+        - heading "Languages" [level=2] [ref=e174]
+        - generic [ref=e176]:
+          - heading "Languages" [level=3] [ref=e177]
+          - generic [ref=e178]:
+            - generic [ref=e179]: German (Native or Bilingual)
+            - generic [ref=e180]: English (Full Professional)
+            - generic [ref=e181]: French (Professional Working)
+      - generic [ref=e182]:
+        - heading "Certifications" [level=2] [ref=e183]
+        - generic [ref=e185]:
+          - heading "Certifications" [level=3] [ref=e186]
+          - generic [ref=e188]: TOGAF® Certification
+  - contentinfo [ref=e189]:
+    - generic [ref=e191]:
+      - paragraph [ref=e192]: © 2026 Sven Schilke.
+      - list [ref=e193]:
+        - listitem [ref=e194]:
+          - link "LinkedIn" [ref=e195] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/sven-schilke-phd/
+  - generic [ref=e198]:
+    - button "Menu" [ref=e199]:
+      - img [ref=e201]
+      - generic: Menu
+    - button "Inspect" [ref=e205]:
+      - img [ref=e207]
+      - generic: Inspect
+    - button "Audit" [ref=e209]:
+      - img [ref=e211]
+      - generic: Audit
+    - button "Settings" [ref=e214]:
+      - img [ref=e216]
+      - generic: Settings

@@ -1,0 +1,77 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Sven Schilke" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Main" [ref=e5]:
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link "Home" [ref=e8] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e9]:
+            - link "About" [ref=e10] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e11]:
+            - link "Resume" [ref=e12] [cursor=pointer]:
+              - /url: /resume
+          - listitem [ref=e13]:
+            - link "Contact" [ref=e14] [cursor=pointer]:
+              - /url: /contact
+  - main [ref=e15]:
+    - generic [ref=e18]:
+      - paragraph [ref=e19]: AI architecture • deep learning • scientific computing
+      - heading "Building reliable AI and data science systems." [level=1] [ref=e20]
+      - paragraph [ref=e21]: I'm Sven Schilke, a Data Science Architect with a PhD in scientific computing and more than a decade of experience turning complex analytical problems into deployed machine learning solutions.
+      - generic [ref=e22]:
+        - link "View resume" [ref=e23] [cursor=pointer]:
+          - /url: /resume
+        - link "Get in touch" [ref=e24] [cursor=pointer]:
+          - /url: /contact
+    - generic [ref=e27]:
+      - heading "About me" [level=2] [ref=e29]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: I design machine learning and analytics systems for financial services, industrial operations, consumer research, and geophysical applications.
+          - paragraph [ref=e33]: Across Viseca, ABB, Kantar, Deltares, and Schlumberger, I've taken work from research and proposal through implementation, combining data pipelines, model development, and deployment with clear business and engineering outcomes.
+        - link "Read more about me" [ref=e35] [cursor=pointer]:
+          - /url: /about
+    - generic [ref=e37]:
+      - heading "Selected experience" [level=2] [ref=e39]
+      - generic [ref=e40]:
+        - article [ref=e41]:
+          - generic [ref=e42]:
+            - heading "Data Science Architect at Viseca" [level=3] [ref=e43]
+            - generic [ref=e44]: Designing AI and analytics architectures for financial services, with emphasis on deployable data science solutions and enterprise fit.
+        - article [ref=e45]:
+          - generic [ref=e46]:
+            - heading "Data Science Consultant at ABB" [level=3] [ref=e47]
+            - generic [ref=e48]: Led advanced analytics initiatives in ABB's turbocharging division, connecting manufacturing and finance use cases with deployed machine learning models.
+        - article [ref=e49]:
+          - generic [ref=e50]:
+            - heading "Lead Data Scientist at Kantar" [level=3] [ref=e51]
+            - generic [ref=e52]: Led a data science team delivering statistical learning and forecasting work for global clients including Facebook, Google, Nestlé, and Coca-Cola.
+    - generic [ref=e55]:
+      - heading "Get in touch" [level=2] [ref=e56]
+      - paragraph [ref=e57]: Interested in AI architecture, applied machine learning, or data-driven product work? Let's connect.
+      - link "Get in touch" [ref=e58] [cursor=pointer]:
+        - /url: /contact
+  - contentinfo [ref=e59]:
+    - generic [ref=e61]:
+      - paragraph [ref=e62]: © 2026 Sven Schilke.
+      - list [ref=e63]:
+        - listitem [ref=e64]:
+          - link "LinkedIn" [ref=e65] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/sven-schilke-phd/
+  - generic [ref=e68]:
+    - button "Menu" [ref=e69]:
+      - img [ref=e71]
+      - generic: Menu
+    - button "Inspect" [ref=e75]:
+      - img [ref=e77]
+      - generic: Inspect
+    - button "Audit" [ref=e79]:
+      - img [ref=e81]
+      - generic: Audit
+    - button "Settings" [ref=e84]:
+      - img [ref=e86]
+      - generic: Settings
