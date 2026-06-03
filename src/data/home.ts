@@ -18,7 +18,7 @@ export const home = {
     ],
     cta: {
       label: "Read more about me",
-      href: "green-galaxy/about",
+      href: "/about",
     },
   },
   highlights: [
@@ -42,6 +42,6 @@ export const home = {
     heading: "Get in touch",
     description: "Interested in AI architecture, applied machine learning, or data-driven product work? Let's connect.",
     label: "Get in touch",
-    href: "green-galaxy/contact",
+    href: "/contact",
   },
 };
