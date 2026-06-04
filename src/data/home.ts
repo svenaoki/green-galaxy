@@ -35,7 +35,7 @@ export const home = {
     {
       title: "Lead Data Scientist at Kantar",
       description:
-        "Led a data science team delivering statistical learning and forecasting work for global clients including Facebook, Google, Nestlé, and Coca-Cola.",
+        "Led a data science team delivering statistical learning and forecasting work for global clients including Facebook, Nestlé, and Coca-Cola.",
     },
   ] satisfies Highlight[],
   cta: {
